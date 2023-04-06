@@ -29,6 +29,8 @@ const config = {
     'scripts/intercom-scripts.js'
   ],
 
+  plugins: ['docusaurus-theme-github-codeblock'],
+
   presets: [
     [
       '@docusaurus/preset-classic',
@@ -189,7 +191,7 @@ const config = {
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
-        additionalLanguages: ['rust'],
+        additionalLanguages: ['rust', 'csharp'],
       },
       algolia: {
         appId: 'UAFD8IBIF7',
