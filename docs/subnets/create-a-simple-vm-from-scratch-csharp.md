@@ -141,12 +141,12 @@ We now have the basic structure of our project. You can find the source code
 corresponding to this part in the [project-initialization
 branch](https://github.com/boulix3/subnet-from-scratch-csharp/tree/project-initialization/src)
 
-### Genesis file
+### Genesis File
 
 We will need to provide a genesis file to initialize the VM, let's just create
 an empty json file (`{}`) and name it genesis.json.
 
-## Starting The Process
+## Starting the Process
 
 Avalanche will look in it's plugin folder (`~/.avalanchego/plugins/`) for a file
 named with the VMId corresponding to the VM's name. You can get a VMId using
@@ -290,7 +290,7 @@ now, we will return objects with these default values :
 
 - Ids : `Id.Default` (32 bytes filled with zero)
 - Err :
-  [Error.Unspecified](https://buf.build/ava-labs/avalanche/docs/main:vm#vm.Error) 
+  [`Error.Unspecified`](https://buf.build/ava-labs/avalanche/docs/main:vm#vm.Error) 
   to indicate that no error has occurred
 - Other : filled with their default values
 
@@ -401,7 +401,7 @@ https://github.com/boulix3/subnet-from-scratch-csharp/blob/building-blocks/src/M
 ```
 
 Let's see the implementation of the `Transfer` method. We must deserialize the
-Json-RPC `params` field and 
+JSON-RPC `params` field and 
 
 ```csharp reference
 https://github.com/boulix3/subnet-from-scratch-csharp/blob/building-blocks/src/MySubnet/Avalanche/HttpServer.cs#L80-L93
@@ -493,7 +493,7 @@ https://github.com/boulix3/subnet-from-scratch-csharp/blob/building-blocks/src/M
 ```
 
 At this point, we can start our VM using `dotnet avalanche run`, and we will
-have a valid blockchain with a basic Json-RPC endpoint. 
+have a valid blockchain with a basic JSON-RPC endpoint. 
 
 You can import this [Postman
 collection](https://github.com/boulix3/subnet-from-scratch-csharp/blob/building-blocks/src/MySubnet.postman_collection.json)
@@ -642,7 +642,7 @@ https://github.com/boulix3/subnet-from-scratch-csharp/blob/building-blocks/src/M
 ## Trying Out
 
 Let's try out our newly built VM. Run `dotnet avalanche run` to start our local
-network. We will now execute some `curl` commands to interact with the Json-RPC
+network. We will now execute some `curl` commands to interact with the JSON-RPC
 endpoint. Our 5 nodes listen on ports `9650`, `9652`, `9654`, `9656`, and
 `9658`. In our examples, we will use various ports randomly to see that the
 nodes are well synchronized.
