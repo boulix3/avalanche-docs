@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - master
+      - run-actions
   pull_request:
 
 env:
